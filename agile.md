@@ -27,3 +27,6 @@
 - Les valeurs métiers permet de calculer le rapport couts bénéfices d'une action
 
 - La vélocité est utilisé pour calculer la quantité de travail qui peut etre accomplie sur une période de temps donnée.
+
+
+![Schema SCRUM](/image/Scrum-process-schema-FR-small.webp)
