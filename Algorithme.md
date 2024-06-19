@@ -188,3 +188,181 @@ void nombreMax(int []board){
 
 ```
 
+## Voici le démineur que tu as eu du mal à faire
+
+``` Java 
+int mine =99;
+  int[][] board = initBoard(10, 10, 10);
+
+void isAmine(int[][] vision) {//création de la fonction vision pour mettre des X ou O à, la place des 0 et 99
+  for (int i = 0; i<vision.length; i++) {
+    for (int k=0; k<vision.length; k++) {
+      if (vision[i][k]==99) {
+        print("X ");
+      } else {
+        int v = getMines(vision,i,k);
+        String content = str(v) + " ";
+        print(content);
+      }
+    }
+    println();
+  }
+}
+
+
+int getMines(int[] [] tableau, int position, int positionL) {//création de la fonction qui permet de signaler si une bombe se trouve à une case
+  int mineProche=0;
+
+  if (position > 0 && positionL > 0 ) {
+    if (tableau[position-1][positionL-1]== 99) {
+      mineProche=mineProche+1;
+    }
+  }
+if  (position >0){
+    if (tableau[position-1][positionL]== 99) {
+      mineProche=mineProche+1;
+    }
+}
+if (position <9) {
+    if (tableau[position+1][positionL]== 99) {
+      mineProche=mineProche+1;
+    }
+}
+
+if  (position > 0 && positionL < 9) {
+    if (tableau[position-1][positionL+1]== 99) {
+      mineProche=mineProche+1;
+    }
+}
+if ( position < 9 && positionL > 0 ) {
+    if (tableau[position+1][positionL-1]== 99) {
+      mineProche=mineProche+1;
+    }
+}
+  if  (positionL < 9){
+    if (tableau[position][positionL+1] == 99) {
+      mineProche=mineProche+1;
+    }
+  }
+  
+  
+  if  (position < 9 && positionL < 9){
+    if (tableau[position+1][positionL+1] == 99) {
+      mineProche=mineProche+1;
+    }
+  }
+  
+  if  ( positionL > 0 ){
+    if (tableau[position][positionL-1] == 99) {
+      mineProche=mineProche+1;
+    }
+  }
+  
+  return mineProche;
+}
+
+
+int[][] initBoard (int size, int sizeL, int nbMine) {//creation d'un tableau
+
+  int board [][] = new int [size][sizeL];//le tableau prend la taille de la variable size donc 10
+  while (nbMine!=0) {//creation d'une boucle qui s'arrete quand la variable nbmine sera égale à 0
+    int randomL = (int)random(sizeL6+);
+    int random = (int)random(size);// création de la variable random qui met au hasard des mines
+    if (board[randomL][random]==0) {//si la case du tableau est un 0 alors une bombe peut etre poser
+      board[randomL] [random]=mine;
+      nbMine = nbMine -1;// donc la variable nbmine perds 1 de valeurs
+    }
+  }
+  return board;// je retoune ma fonction pour qu'elle soit égale au tableau
+}
+void setup() {
+  //int[][] board = initBoard(10, 10, 10);
+  isAmine(board);
+  // println("nombre de bombe autour", getMines(board, 5,5));
+
+}
+```
+
+## Jeux de l'oie (pas fini)
+```Java 
+int taillePlateau = 64;//Variable pour crrer la longueur de mon tableau
+int nbJoueur = 4;
+int [] Joueur =  new int [nbJoueur];//variable appeler dans la fonction plateau pour creer la longueur de la boucle
+int [] tableauY =  new int [nbJoueur];
+int [] plateauDeJeux = new int[taillePlateau];//Création de du tableau servant de terrain de jeux
+
+void avancement(int p) {//fonction qui sert à creer les joueurs
+fill(15, 157, 232);
+tableauY[p]= 310+(35*p);
+ rect(plateauDeJeux[Joueur[p]], tableauY[p], 19, 19);// rectangle représentant 1 joueur
+
+ fill(255);
+ textSize(30);
+ text(Joueur[p], tableauY[p],50);
+}
+
+
+void lanceDes (int y) {//fonction qui permet de lancer les dés et permet de revenir en arriere si les dés depasse les 63
+    int des1= (int)random(6)+1;// création de dés avec un chiffre aléatoire de 1 à 6
+    int des2 = (int)random(6)+1;//création de dés avec un chiffre aléatoire de 1 à 6
+
+    //println(desF);//imprime le chiffre aléatoire
+    //println(desS);//imprime le chiffre aléatoire
+
+    int desJoueur= des1+des2;// création d'une variable qui additionne les 2 valeurs aleéatoire des dés
+   
+
+    if (Joueur[y]+desJoueur>63) {// création d'une condition pour éviter que la boucle se boucle à l'infini
+      int reste=(Joueur[y]+desJoueur)-63;
+      int retour = 63 -reste;
+      Joueur[y] = retour;
+    } else {
+      Joueur[y] = Joueur[y]+desJoueur;
+    }
+    
+    //if (Joueur== 9 || Joueur== 18 || Joueur== 27 || Joueur== 36 || Joueur== 45 || Joueur== 54){
+      //Joueur = Joueur+ desJoueur;
+    //}
+   
+    println(Joueur);//imprime ma boucle en respectant mes condition
+    if (Joueur[y] ==63){
+      fill(255);
+      text("WIN!!!",80,80);
+      println("Win");
+      noLoop();
+    }
+ 
+  }
+
+
+
+void terrain() {// création d'une fonction qui sert à creer en visuel un tableau de 63 cases
+  background(152, 190, 100);//met de la couleur au fond
+  int posX=0;//creation d'une variable pour représenter les rectangle
+  for (int i=0; i<64; i++) {//creer une boucle de 63 qui va de 1 à1
+    posX = posX+20;//permet d'utiliser une variable pour permettre à mes rectangle de pas etre coller les un sur les autre
+    fill(255);
+    rect(posX+150, 300, 20, 150);// coordonnées d'un rectangle que je boucle 63 fois
+      plateauDeJeux[i]=posX+150;
+
+  }
+}
+
+void setup() {
+  size(1600, 800);//création de la fenetre d'affichage
+ terrain();//appel ma fonction
+ println(plateauDeJeux);
+}
+
+
+
+
+void draw(){
+  terrain();
+  for (int i=0; i<nbJoueur;i++){
+   lanceDes(i);//appel ma fonction
+  avancement(i);
+  delay(500/nbJoueur);
+  }
+}
+```
