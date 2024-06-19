@@ -39,3 +39,35 @@ Malware |Différents|
 
 
 ![cadenas](./image/hacking-3112539_1920.png)
+
+## différentes types d'attaque
+
+### DDOS
+
+Dans le cadre d'une attaque par déni de service distribué (DDoS), un type de cyberattaque, un attaquant submerge un site Web, un serveur ou une ressource réseau avec du trafic malveillant. En conséquence, la cible tombe en panne ou cesse de fonctionner, refusant le service aux utilisateurs légitimes et empêchant le trafic légitime d'arriver à destination.
+
+D'un point de vue général, une attaque DDoS ou DoS est comme un embouteillage inattendu causé par des centaines de fausses demandes de covoiturage. Les demandes semblent légitimes pour les services de covoiturage, ils envoient donc des chauffeurs pour récupérer les passagers, ce qui encombre inévitablement les rues de la ville. Le trafic légitime ordinaire est alors entravé et les personnes ne peuvent pas arriver à destination.
+
+![DDOS](./image/ddos.avif)
+
+### Injection SQL
+
+L'injection SQL est une technique permettant d'injecter des éléments, notamment du code de type SQL (Structured Query Language, langage utilisé pour manipuler les bases de données), dans les champs des formulaires web ou dans les liens des pages afin de les envoyer au serveur web.
+
+![InjectionSQL](./image/injectonsql.png)
+
+
+### Cross-site scripting
+
+Le cross-site scripting (abrégé XSS) est un type de faille de sécurité des sites web permettant d'injecter du contenu dans une page, provoquant ainsi des actions sur les navigateurs web visitant la page. Les possibilités des XSS sont très larges puisque l'attaquant peut utiliser tous les langages pris en charge par le navigateur (JavaScript, Java...) et de nouvelles possibilités sont régulièrement découvertes notamment avec l'arrivée de nouvelles technologies comme HTML5. Il est par exemple possible de rediriger vers un autre site pour de l'hameçonnage ou encore de voler la session en récupérant les cookies.
+
+Le cross-site scripting est abrégé XSS pour ne pas être confondu avec le CSS (feuilles de style)1, X se lisant « cross » (croix, à travers) en anglais.
+
+![CrossSiteScripting](./image/Cross-Site-ScriptingXSS.png)
+
+###  Man-in-the-Middle
+
+Lorsque vous essayez d'accéder à une page web, les informations voyagent du serveur à votre ordinateur via une super-autoroute de câbles, de routeurs et de commutateurs informatiques qui étendent l'internet à travers le monde. Comme les voleurs d'autoroutes d'autrefois, les attaquants modernes savent que vous êtes vulnérable à chaque "carrefour". C'est à ces endroits que vos données peuvent être interceptées, lues et même modifiées. Une attaque man-in-the-middle est une procédure qui permet à un attaquant de s'interposer entre vous et l'ordinateur avec lequel vous communiquez pour lire la conversation ou la modifier. Cette procédure était extrêmement courante avant le passage massif à HTTP-Secure et elle l'est toujours aujourd'hui, même si elle est un peu plus compliquée à réaliser.
+
+
+![mitm](./image/mitm.webp)
