@@ -19,3 +19,23 @@
 - Serveur Web : Au niveau des composants matériels, un serveur web est un ordinateur qui stocke les fichiers qui composent un site web (par exemple les documents HTML, les images, les feuilles de style CSS, les fichiers JavaScript) et qui les envoie à l'appareil de l'utilisateur qui visite le site.
 
 - Apache : Le logiciel libre Apache HTTP Server est un serveur HTTP créé et maintenu au sein de la fondation Apache. Jusqu'en avril 2019, ce fut le serveur HTTP le plus populaire du World Wide Web. Il est distribué selon les termes de la licence Apache.
+
+## Les variables
+
+- $nomvariable = 4 (int)
+- $nomvariable = "salut"(string)
+- $nomvariable = true (boolean)
+
+### Porter des variables
+-Locale : peut etre utilisé dans une fonction
+-Global : doit avoir marqué "global" avant d'etre appelé, peut etre utilisé dans toute une page, 
+- Static : : permet à une varibale de garder en parametre les valeurs aquis.
+
+## Echo et print
+Les 2 serves à afficher du texte, echo peut avoir des balises html.
+
+## boucles php
+- While : parcourt un bloc de code jusqu' a la fin de la conditions 
+-do while : parcourt une fois le code puis repete tant que la condition est vrai
+for : parcourt le code par rapport au nombre de fois spcécifié
+foreach : parcourt du code dans un tableau
