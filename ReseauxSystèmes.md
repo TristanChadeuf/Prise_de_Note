@@ -123,3 +123,9 @@ SSH doit être utilisé en lieu et place de protocoles historiques (TELNET, RSH,
 
 # Quelles sont les différents modes d’utilisation de SSH (notamment au niveau de la sécurité)?
 
+En général, deux méthodes d'authentification SSH sont largement utilisées: l'authentification par mot de passe et l'authentification par clé publique ( PKI ).
+
+
+
+![MCV](./image/asymmetric-encryption.webp)
+
