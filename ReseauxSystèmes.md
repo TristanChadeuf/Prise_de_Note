@@ -129,3 +129,7 @@ En général, deux méthodes d'authentification SSH sont largement utilisées: l
 
 ![MCV](./image/asymmetric-encryption.webp)
 
+## Quelles sont les problématiques qui vont survenir par rapport à la gestion des différents code source (notamment par rapport à la diversité des technologies)?
+
+Le problème de cette méthode et qu'il faut tout changer à chaque changement le déploiement
+
