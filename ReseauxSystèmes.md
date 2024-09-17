@@ -133,3 +133,98 @@ En général, deux méthodes d'authentification SSH sont largement utilisées: l
 
 Le problème de cette méthode et qu'il faut tout changer à chaque changement le déploiement
 
+
+# Comment configurer un serveur web
+
+Guide d’intallation : https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04-fr
+
+## Pour mettre le cryptage SSL
+Voici un tutorial interessant et complet : https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04-fr
+
+
+# Docker
+
+Les avantages de la conteneurisation :
+
+
+### Portabilité
+
+Un conteneur d'application crée un progiciel exécutable qui est isolé par rapport au système d'exploitation hôte. Ainsi, il ne dépend pas du système d'exploitation hôte et n'est pas lié à celui-ci, ce qui le rend portable et lui permet de s'exécuter de manière cohérente et uniforme sur n'importe quelle plate-forme ou cloud. Les méthodes de consolidation du système d'exploitation utilisées par les développeurs permettent également d'éviter les incohérences telles que l'intégration qui cherche à entraver la fonctionnalité de l'application.
+
+### Vitesse
+
+Les développeurs désignent les conteneurs comme « légers » parce qu'ils partagent le noyau du système d'exploitation de la machine hôte et qu'ils ne font pas l'objet de charges supplémentaires. Leur légèreté permet d'améliorer l'efficacité des serveurs et de réduire les coûts liés aux serveurs et aux licences. Elle réduit également le temps de lancement, car il n'y a pas de système d'exploitation à démarrer.
+
+
+L'utilisation d'un conteneur Docker vous permet de créer une version principale d'une application (image) et de la déployer rapidement sur demande. Un environnement conteneur garantit une grande flexibilité lorsque vous souhaitez créer plusieurs nouvelles instances conteneurisées d'applications à la demande.
+
+### Évolutivité
+
+La technologie des conteneurs d'applications offre une grande évolutivité. Un conteneur d'application peut gérer des charges de travail croissantes en reconfigurant l'architecture existante afin d'activer les ressources à l'aide d'une conception d'application orientée vers les services. Par ailleurs, un développeur peut ajouter d'autres conteneurs dans un cluster d'ordinateurs distribués.
+
+Un environnement conteneur permet l'ajout de nouvelles fonctions, mises à jour et caractéristiques instantanément sans que cela affecte les applications d'origine. Par conséquent, les conteneurs permettent l'évolutivité des applications avec une utilisation des ressources minimale.
+
+### Agilité
+
+Le Docker Engine, qui permet l'exécution des conteneurs, est devenu la norme de l'industrie en matière de conteneurs d'applications grâce à des outils de développement simples et à une approche universelle fonctionnant avec les systèmes d'exploitation Windows et Linux. Cet écosystème de conteneurs est désormais passé aux moteurs sous la direction de l'OCI (Open Container Initiative). Les développeurs peuvent donc continuer à utiliser les outils et les processus DevOps pour accélérer le développement et l'amélioration des applications.
+
+### Efficacité
+
+Étant donné que les logiciels exécutés dans les environnements conteneurisés partagent le noyau du système d'exploitation de la machine hôte, les développeurs peuvent partager les couches d'application entre les conteneurs. De plus, les conteneurs ont une capacité intrinsèquement plus petite que les machines virtuelles. Leur temps de démarrage est réduit, ce qui permet aux développeurs d'exécuter plus de conteneurs sur la même capacité de calcul qu'une machine virtuelle unique. Ainsi, l'efficacité des serveurs est augmentée et les coûts des serveurs et des licences sont réduits.
+
+### Mauvaise isolation
+
+La conteneurisation d'une application permet de l'isoler et de la faire fonctionner de façon indépendante. Par conséquent, la défaillance d'un conteneur n'affecte pas le fonctionnement des autres. Les équipes de développement peuvent rapidement identifier et corriger les problèmes techniques d'un conteneur défectueux sans provoquer l'arrêt du reste des conteneurs. En outre, le moteur de conteneur peut tirer parti de techniques d'isolation de la sécurité du système d'exploitation comme le contrôle d'accès SELinux pour identifier et isoler les pannes au sein des conteneurs.
+
+### Sécurité
+
+L'isolation des applications via les conteneurs empêchent le code malveillant d'affecter d'autres applications conteneurisées ou le système hôte. Vous pouvez également définir des autorisations de sécurité pour bloquer automatiquement l'accès aux composants indésirables qui cherchent à s'introduire dans d'autres conteneurs ou à limiter les communications.
+
+L'isolation des applications aide les développeurs à partager des fonctionnalités supplémentaires sans facteur de risque. Par exemple, si vous travaillez avec une équipe de développement à l'extérieur de votre réseau, vous pouvez partager les ressources nécessaires sans que les informations critiques ne se trouvent dans votre réseau.
+
+### Facilité de la gestion
+
+En utilisant une plate-forme d'orchestration des conteneurs, vous pouvez automatiser l'installation, la gestion et l'évolution des charges de travail et des services conteneurisés. L'orchestration des conteneurs permet de faciliter les tâches de gestion, comme le déploiement de nouvelles versions d'applications, l'évolution d'applications conteneurisées ou la mise à disposition de fonctions de surveillance, de consignation et de débogage.
+
+### Continuité
+
+Différents conteneurs s'exécutent indépendamment, de sorte que la défaillance de l'un n'aura pas d'impact sur la continuité des autres. Les équipes de développement bénéficient de la flexibilité nécessaire à la correction des erreurs dans un conteneur sans provoquer l'arrêt des autres. Par conséquent, la conteneurisation assure la continuité des opérations.
+
+### Facilité d'utilisation pour les développeurs
+
+Les conteneurs sont conviviaux pour les développeurs, car il est possible d'utiliser un seul environnement pour le développement et la production, un obstacle courant dans le développement d'applications web. Votre équipe de développement peut écrire une app sur un ordinateur portable Windows, mais celle-ci ne s'exécute pas sur un poste de travail Mac.
+
+Avec la conteneurisation, l'image que votre équipe construit localement est la même que celle exécutée en production. Lorsqu'elles sont combinées à un workflow approprié, les applications conteneurisées peuvent aider à minimiser les cas où elles fonctionnent correctement à un emplacement, mais elles s'exécutent avec bogues dans un autre. De plus, les workflow de construction de conteneurs fonctionnent exceptionnellement bien dans les intégrations de pipelines CI/CD. Ces avantages permettent à votre équipe de développement de gagner en productivité et en efficacité.
+
+### Quelle est la différence entre une image Docker et un conteneur ?
+Si on etait enobjet il faut imaginer que le conteneur est un objet et une image une classe
+
+### Que fait Docker si l’image demandée n’est pas présente localement?
+
+l'image sera télécharger directement sur internet
+
+## Les volumes avec docker
+
+Un volume standard dans Docker est un répertoire (ou un système de fichiers) dans l'hôte qui est géré par Docker. Il est isolé de la structure du système de fichiers de l'hôte et du cycle de vie des conteneurs.
+
+exemple d'un lancement de container avec un volume :
+
+sudo docker run --detach -v my-vol  --name some-mariadb --env MARIADB_ROOT_PASSWORD=root  mariadb:latest 
+
+## Stateless et stateful
+
+- Stateless
+
+Un processus ou une application stateless est indépendant. Il ne stocke pas de données et ne fait référence à aucune transaction passée. Chaque transaction est effectuée à partir de rien, comme si c'était la première fois. Les applications stateless fournissent un service ou une fonction et utilisent un réseau de diffusion de contenu, le web ou des serveurs d'impression pour traiter ces requêtes à court terme. 
+
+Par exemple, une recherche en ligne pour répondre à une question quelconque est une transaction stateless. Vous tapez votre question dans le moteur de recherche et appuyez sur Entrée. Si votre transaction est accidentellement interrompue ou fermée, vous devez en démarrer une nouvelle. Les transactions stateless sont comparables à des distributeurs automatiques : une seule requête et une seule réponse. 
+
+
+
+- Stateful
+Les applications et processus stateful, quant à eux, peuvent être réutilisés indéfiniment. Les plateformes bancaires en ligne et les messageries en sont deux exemples. Les transactions précédentes sont prises en compte et peuvent affecter la transaction actuelle. C'est pour cela que les applications stateful utilisent les mêmes serveurs chaque fois qu'elles traitent une requête d'un utilisateur.  
+
+Si une transaction stateful est interrompue, le contexte et l'historique sont stockés et vous pouvez ainsi reprendre là où vous en étiez. Les applications stateful gardent une trace de divers éléments, comme l'URL de la page, les paramètres de préférence et l'activité récente. Les transactions stateful sont comparables à une conversation continue et périodique avec la même personne.
+
+La majorité des applications que nous utilisons au quotidien sont des applications stateful. Toutefois, les technologies évoluent et les microservices ainsi que les conteneurs facilitent le développement et le déploiement d'applications dans le cloud. 
+
