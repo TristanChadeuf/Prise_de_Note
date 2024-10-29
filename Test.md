@@ -17,7 +17,8 @@ Les tests unitaires sont de très bas niveau, près de la source de votre applic
 Les tests d'intégration vérifient que les différents modules ou services utilisés par votre application fonctionnent bien ensemble. Par exemple, ils peuvent tester l'interaction avec la base de données ou s'assurer que les microservices fonctionnent ensemble comme prévu. Ces types de tests sont plus coûteux à exécuter, car ils nécessitent que plusieurs parties de l'application soient fonctionnelles.
 
 ## 3. Tests fonctionnels
-Les tests fonctionnels se concentrent sur les exigences métier d'une application. Ils vérifient uniquement la sortie d'une action et non les états intermédiaires du système lors de l'exécution de cette action.
+Les tests fonctionnels se concentrent sur les exigences métier d'une application. Ils vérifient uniquement 
+la sortie d'une action et non les états intermédiaires du système lors de l'exécution de cette action.
 
 Il y a parfois une certaine confusion entre les tests d'intégration et les tests fonctionnels, car ils nécessitent tous les deux plusieurs composants pour interagir. La différence réside dans le fait qu'un test d'intégration peut simplement vérifier que vous pouvez interroger la base de données, tandis qu'un test fonctionnel s'attend à obtenir une valeur spécifique de la base de données, telle que définie par les exigences du produit.
 
@@ -39,4 +40,55 @@ Les « smoke tests » peuvent être utiles juste après la création d'un build 
 
 ## Définir ce qu’est le TDD et quels sont les avantages de cette pratique.
 
-Le test-driven development désigne une méthodologie de développement logiciel piloté par les tests. Cette technique est utilisée par les équipes agiles, elle est itérative et incrémentale. Le TDD pousse les développeurs à corriger les bugs en temps réel, au fur et à mesure de la programmation.
+Le test-driven development désigne une méthodologie de développement logiciel piloté par les tests. 
+Cette technique est utilisée par les équipes agiles, elle est itérative et incrémentale. 
+Le TDD pousse les développeurs à corriger les bugs en temps réel, au fur et à mesure de la programmation.
+
+## Cahier de test
+
+- Nom du test : Le titre qui décrit la fonctionnalité à tester.
+- ID du test : Généralement un identifiant numérique ou alphanumérique que les testeurs utilisent pour regrouper les cas de test en suites de test.
+- Objectif : Également appelé description, ce composant décrit ce que le test doit valider.
+- Références : Liens vers vos « user stories » et les spécifications de conception ou les exigences que le test doit vérifier.
+- Conditions préalables : Toutes les conditions nécessaires pour que le testeur puisse effectuer le test.
+- Configurations : Ce composant identifie ce dont le scénario de test a besoin pour fonctionner correctement, comme la version de l'application, le système d'exploitation, les exigences en matière de date et d'heure et les spécifications de sécurité.
+- Étapes de test : Des descriptions détaillées des actions séquentielles qui doivent être effectuées pour terminer le test.
+- Résultat attendu : Une explication de la manière dont la fonctionnalité ou le système doit réagir.
+
+## test 1 = 
+
+- Nom = DislayedWord
+- id = 1
+- Objectif = Teste le bon affichage du mot à deviner en fonction des lettres trouvées
+
+
+## test 2 = 
+- Nom = Attemps
+- id = 2
+- Objectif = Teste le nombre d'essai
+
+## test 3 =
+
+- Nom = CompteurError
+- id = 3
+- Objectif = Teste si le compteur d'erreur marche
+
+## test 4 = 
+
+- Nom = AfficheMot
+- id = 4 
+- Objectif = Teste si un mot est bien afficher
+
+## test 5 = 
+
+- Nom = CheckWin
+- id = 5
+- Objectif = Tester si le message s'affiche si la personne gagne
+
+## test 6 = 
+
+- Nom = CheckLose
+- id = 6
+- Objectif = Tester si le message s'affiche si la personne perd
+
+
