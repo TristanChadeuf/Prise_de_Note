@@ -137,3 +137,7 @@ deploy:
 
 ![Schema SCRUM](./image/dns.png)
 
+
+## Diagramme de déploiement
+
+![diagramme déploiement](./image/Capture%20d’écran%20du%202024-11-27%2011-15-09.png)
