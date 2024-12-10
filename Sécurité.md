@@ -25,7 +25,7 @@ L'ingénierie sociale est une tactique que les hackers utilisent pour vous incit
 ## Types de logiciels malveillants
 
 Malware |Différents|
-| - | - | 
+| - | - | ''
 | Les logiciels publicitaires  | logiciels indésirables conçus pour afficher des publicités sur votre écran, le plus souvent dans un navigateur Web. En règle générale, il utilise une méthode sournoise pour se faire passer pour légitime ou pour s'appuyer sur un autre programme pour vous inciter à l'installer sur votre PC, votre tablette ou votre appareil mobile.|
 | Les logiciels espions |  sont des logiciels malveillants qui observent secrètement les activités de l'utilisateur de l'ordinateur sans autorisation et les signalent à l'auteur du logiciel.|
  | virus | Un  virus  est un logiciel malveillant qui s'attache à un autre programme et, lorsqu'il est exécuté (généralement par inadvertance par l'utilisateur), se réplique en modifiant d'autres programmes informatiques et en les infectant avec ses propres morceaux de code.
